@@ -26,8 +26,7 @@ function selectPlayer(player){
     const playerId = player;
 
     playerId.setAttribute('disabled', true)
-   
-   
+    
     names.push(playerName)
     displayPlayerName()
 }
