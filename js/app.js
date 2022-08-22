@@ -7,14 +7,16 @@ function displayPlayerName(){
     for(let i = 0; i < names.length; i++){
         // console.log(names[i])
         // console.log(i + 1)
-        const li = document.createElement('li');
-        li.innerText = `${i + 1} ${names[i]}`
-        playerList.appendChild(li);
+       
 
-        if( i >= 4){
+        if( i <= 4){
+            // alert('you already added 5 players')
+            // break;
+            const li = document.createElement('li');
+            li.innerText = `${i + 1} ${names[i]}`
+            playerList.appendChild(li);
+        }else{
             alert('you already added 5 players')
-            break;
-            
         }
         
     }
@@ -40,7 +42,7 @@ function getInputvalue(inputId){
     const inputValue = parseFloat(inputValueString);
 
     if(isNaN(inputValue)){
-        alert('please provide an number')
+        alert('please provide your amount')
     }
     else{
         return inputValue;
@@ -55,7 +57,7 @@ function setElementvalue(element, value){
     const elementId = document.getElementById(element);
     // elementId.innerText = value;
     if(isNaN(value)){
-        elementId.innerText = '';
+        elementId.innerText = 0;
     }
     else{
         elementId.innerText = value;  
