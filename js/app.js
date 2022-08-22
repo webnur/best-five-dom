@@ -1,4 +1,12 @@
 
+function selectPlayer(player){
+    console.log(player.parentNode.parentNode.children[0].innerText)
+}
+
+
+
+
+
 function getInputvalue(inputId){
     const inputField = document.getElementById(inputId);
     const inputValueString = inputField.value;
