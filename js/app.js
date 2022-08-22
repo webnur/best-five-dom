@@ -17,6 +17,7 @@ function displayPlayerName(){
             playerList.appendChild(li);
         }else{
             alert('you already added 5 players')
+            break;
         }
         
     }
