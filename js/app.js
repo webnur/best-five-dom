@@ -13,6 +13,7 @@ function displayPlayerName(){
 
         
     }
+
 }
 function selectPlayer(player){
     // console.log(player.parentNode.parentNode.children[0].innerText)
@@ -40,8 +41,10 @@ function setElementvalue(element, value){
 document.getElementById('per-player-amount').addEventListener('click', function(){
    
     const playerAmount = getInputvalue('amount-field');
+
+    const ulLength = document.getElementById('player-list');
     
-    const playerQuiantity = 5;
+    const playerQuiantity = ulLength.children.length;
     const totalAmount =playerAmount * playerQuiantity;
     console.log(totalAmount)
 
