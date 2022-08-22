@@ -41,8 +41,8 @@ document.getElementById('total-calculate-button').addEventListener('click', func
     
     // display total Amount 
 
-    const totalAmount = document.getElementById('total');
-    totalAmount.innerText = total;
+     setElementvalue('total', total);
+  
     
 
 })
