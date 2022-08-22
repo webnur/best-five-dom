@@ -1,8 +1,28 @@
+const names = []
 
-function selectPlayer(player){
-    console.log(player.parentNode.parentNode.children[0].innerText)
+function displayPlayerName(){
+
+    const playercontainer = document.getElementById('player-container');
+    playercontainer.textContent = '';
+    for(let i = 0; i < names.length; i++){
+        // console.log(names[i])
+        // console.log(i + 1)
+
+        const ul = document.createElement('ul');
+        
+        ul.innerHTML = `
+        <li><a>${i + 1} ${names[i]}</a></li>
+        `
+        playercontainer.appendChild(ul)
+    }
 }
-
+function selectPlayer(player){
+    // console.log(player.parentNode.parentNode.children[0].innerText)
+    const playerName = player.parentNode.parentNode.children[0].innerText;
+    names.push(playerName)
+    displayPlayerName()
+}
+console.log(names)
 
 
 
