@@ -14,7 +14,7 @@ function displayPlayerName(){
         if( i >= 4){
             alert('you already added 5 players')
             break;
-           
+            
         }
         
     }
@@ -26,6 +26,8 @@ function selectPlayer(player){
     const playerId = player;
 
     playerId.setAttribute('disabled', true)
+   
+   
     names.push(playerName)
     displayPlayerName()
 }
