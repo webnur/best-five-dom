@@ -11,6 +11,9 @@ function displayPlayerName(){
         li.innerText = `${i + 1} ${names[i]}`
         playerList.appendChild(li);
 
+        if( i >= 4){
+            break;
+        }
         
     }
 
@@ -30,7 +33,16 @@ function getInputvalue(inputId){
     const inputField = document.getElementById(inputId);
     const inputValueString = inputField.value;
     const inputValue = parseFloat(inputValueString);
-    return inputValue;
+
+    if(isNaN(inputValue)){
+        alert('please provide an number')
+    }
+    else{
+        return inputValue;
+    }
+
+    // return inputValue
+    
 }
 
 
