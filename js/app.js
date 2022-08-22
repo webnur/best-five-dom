@@ -2,18 +2,16 @@ const names = []
 
 function displayPlayerName(){
 
-    const playercontainer = document.getElementById('player-container');
-    playercontainer.textContent = '';
+    const playerList = document.getElementById('player-list');
+    playerList.textContent = '';
     for(let i = 0; i < names.length; i++){
         // console.log(names[i])
         // console.log(i + 1)
+        const li = document.createElement('li');
+        li.innerText = `${i + 1} ${names[i]}`
+        playerList.appendChild(li);
 
-        const ul = document.createElement('ul');
         
-        ul.innerHTML = `
-        <li><a>${i + 1} ${names[i]}</a></li>
-        `
-        playercontainer.appendChild(ul)
     }
 }
 function selectPlayer(player){
