@@ -12,7 +12,9 @@ function displayPlayerName(){
         playerList.appendChild(li);
 
         if( i >= 4){
+            alert('you already added 5 players')
             break;
+           
         }
         
     }
@@ -21,10 +23,12 @@ function displayPlayerName(){
 function selectPlayer(player){
     // console.log(player.parentNode.parentNode.children[0].innerText)
     const playerName = player.parentNode.parentNode.children[0].innerText;
+    const playerId = player;
+
+    playerId.setAttribute('disabled', true)
     names.push(playerName)
     displayPlayerName()
 }
-console.log(names)
 
 
 
@@ -48,7 +52,13 @@ function getInputvalue(inputId){
 
 function setElementvalue(element, value){
     const elementId = document.getElementById(element);
-    elementId.innerText = value;
+    // elementId.innerText = value;
+    if(isNaN(value)){
+        elementId.innerText = '';
+    }
+    else{
+        elementId.innerText = value;  
+    }
 }
 document.getElementById('per-player-amount').addEventListener('click', function(){
    
@@ -58,7 +68,7 @@ document.getElementById('per-player-amount').addEventListener('click', function(
     
     const playerQuiantity = ulLength.children.length;
     const totalAmount =playerAmount * playerQuiantity;
-    console.log(totalAmount)
+  
 
     // display player expenses
     setElementvalue('show-player-amount', totalAmount)
