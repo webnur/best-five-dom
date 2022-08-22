@@ -1,0 +1,23 @@
+main {
+    background-color: #2A303C;
+    color:  #A6ADBA;
+}
+
+.card {
+    border-radius: 5px;
+    border: 1px solid #434343;
+}
+
+.select-button{
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+.custom-bg {
+  background-image: url(/images/header.png);
+  background-repeat: no-repeat;
+ background-size: cover;
+  
+}
+.custom-height {
+  height: 500px;
+}
