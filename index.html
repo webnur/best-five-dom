@@ -156,9 +156,9 @@
                         <h2 class="text-4xl mb-5">Budget</h2>
                         <div>
                             <span class="text-1xl">Per Player</span>
-                            <input  type="text" placeholder="Type here" class="input input-bordered w-75 max-w-xs ml-5" />
+                            <input id="amount-field" type="text" placeholder="Type here" class="input input-bordered w-75 max-w-xs ml-5" />
                         </div>
-                        <button class="btn btn-primary mt-5 py-4 px-24">Calculate</button>
+                        <button id="per-player-amount" class="btn btn-primary mt-5 py-4 px-24">Calculate</button>
                         <p class="my-5">Player Expenses <span>$555</span></p>
                        <div>
                         <span class="text-1xl">Manager</span>
@@ -168,7 +168,7 @@
                         <span class="text-1xl">Coach</span>
                         <input  type="text" placeholder="Type here" class="input input-bordered w-75 max-w-xs ml-9" />
                       </div>
-                      <button class="btn btn-primary mt-5 py-4 px-20">Calculate Total</button>
+                      <button id="total-calculate-button" class="btn btn-primary mt-5 py-4 px-20">Calculate Total</button>
                       
                       
                       <p class="font-bold text-2xl mt-5">Total <span class="ml-20">$1000</span></p>
@@ -180,6 +180,9 @@
 
 
     </main>
-    <footer></footer>
+<footer>
+
+</footer>
+<script src="js/app.js"></script>
 </body>
 </html>
