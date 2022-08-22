@@ -6,6 +6,11 @@ function getInputvalue(inputId){
     return inputValue;
 }
 
+
+function setElementvalue(element, value){
+    const elementId = document.getElementById(element);
+    elementId.innerText = value;
+}
 document.getElementById('per-player-amount').addEventListener('click', function(){
    
     const playerAmount = getInputvalue('amount-field');
@@ -13,7 +18,31 @@ document.getElementById('per-player-amount').addEventListener('click', function(
     const playerQuiantity = 5;
     const totalAmount =playerAmount * playerQuiantity;
     console.log(totalAmount)
+
+    // display player expenses
+    setElementvalue('show-player-amount', totalAmount)
 })
 
 
-document.getElementById('total-calculate-button').addEventListener('click')
+document.getElementById('total-calculate-button').addEventListener('click', function(){
+
+    // get total Player Amount 
+    const playerExpenses = document.getElementById('show-player-amount');
+    const playerExpensesString = playerExpenses.innerText; 
+    const playerExpense = parseFloat(playerExpensesString)
+    // get Manager Amount
+    const managerAmount = getInputvalue('manager-amount');
+
+    // get coach Amount 
+    const coachAmount = getInputvalue('coach-amount');
+
+    // total cost 
+    const total = playerExpense + managerAmount + coachAmount;
+    
+    // display total Amount 
+
+    const totalAmount = document.getElementById('total');
+    totalAmount.innerText = total;
+    
+
+})
