@@ -21,3 +21,13 @@ main {
 .custom-height {
   height: 500px;
 }
+
+
+.btn-disabled, .btn-disabled:hover, .btn[disabled], .btn[disabled]:hover {
+    --tw-border-opacity: 0;
+    background-color: #636e72;
+    --tw-bg-opacity: .2;
+    /* color: hsl(var(--bc)/var(--tw-text-opacity)); */
+    color: #a29bfe;
+    --tw-text-opacity: .2;
+}
