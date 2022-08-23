@@ -1,7 +1,17 @@
+
 const names = []
+function selectPlayer(player){
+    // console.log(player.parentNode.parentNode.children[0].innerText)
+    const playerName = player.parentNode.parentNode.children[0].innerText;
+    const playerId = player;
+    console.log(playerId.parentNode.children.length)
+    // playerId.setAttribute('disabled', true)
 
-function displayPlayerName(){
-
+   
+    
+    names.push(playerName)
+    
+    // display player name 
     const playerList = document.getElementById('player-list');
     playerList.textContent = '';
     for(let i = 0; i < names.length; i++){
@@ -10,28 +20,18 @@ function displayPlayerName(){
        
 
         if( i <= 4){
-            // alert('you already added 5 players')
-            // break;
             const li = document.createElement('li');
             li.innerText = `${i + 1} ${names[i]}`
             playerList.appendChild(li);
+            playerId.setAttribute('disabled', true)
+            
         }else{
+           playerId.removeAttribute('disabled')
             alert('you already added 5 players')
             break;
         }
         
     }
-
-}
-function selectPlayer(player){
-    // console.log(player.parentNode.parentNode.children[0].innerText)
-    const playerName = player.parentNode.parentNode.children[0].innerText;
-    const playerId = player;
-
-    playerId.setAttribute('disabled', true)
-    
-    names.push(playerName)
-    displayPlayerName()
 }
 
 
