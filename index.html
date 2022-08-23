@@ -127,37 +127,40 @@
                 </div>
                 <!-- cart -->
                 <div>
-                    <div class="top-sidebar ml-5">
-                        <h2 class="text-4xl">Selected - V</h2>
-                        <div id="player-container">
-
-                        
-                        <ul id="player-list" class="menu menu-compact lg:menu-normal w-56 p-2 rounded-box">
-                            
-                          </ul>
+                    <div class="top-sidebar ml-5 shadow-xl h-60 w-72">
+                        <h2 class="text-4xl pt-5 text-center">Selected - V</h2>
+                        <div id="player-container">                   
+                          <ul id="player-list" class="menu menu-compact lg:menu-normal w-56 p-2 rounded-box">                           
+                            </ul>
+                        </div>
+                      </div>
                    
-                    <div class="bottom-sidebar ml-5">
-                        <h2 class="text-4xl mb-5">Budget</h2>
-                        <div>
+                      <div class="bottom-sidebar ml-5 shadow-xl w-72 mt-5">
+                        <h2 class="text-4xl mb-5 pt-5 text-center">Budget</h2>
+                        <div class="ml-3">
                             <span class="text-1xl">Per Player</span>
                             <input id="amount-field" type="text" placeholder="Type here" class="input input-bordered w-40 max-w-xs ml-5" />
                         </div>
-                        <button id="per-player-amount" class="btn btn-primary mt-5 py-4 px-20">Calculate</button>
-                        <p class="my-5">Player Expenses <span>$</span><span id="show-player-amount">0</span></p>
-                       <div>
+                        <button id="per-player-amount" class="btn btn-primary mt-5 ml-3 py-4 px-20">Calculate</button>
+                        <p class="my-5 ml-3">Player Expenses <span>$</span><span id="show-player-amount">0</span></p>
+                       <div class="ml-3">
                         <span class="text-1xl">Manager</span>
                         <input id="manager-amount"  type="text" placeholder="Type here" class="input input-bordered w-40 max-w-xs ml-5" /> 
                        </div>
-                      <div class="mt-5">
+                      <div class="mt-5 ml-3">
                         <span class="text-1xl">Coach</span>
                         <input id="coach-amount" type="text" placeholder="Type here" class="input input-bordered w-40 max-w-xs ml-9" />
                       </div>
-                      <button id="total-calculate-button" class="btn btn-primary mt-5 py-4 px-16">Calculate Total</button>
+                      <button id="total-calculate-button" class="btn btn-primary mt-5 ml-3 py-4 px-16">Calculate Total</button>
                       
                       
-                      <p class="font-bold text-2xl mt-5">Total <span>$</span><span id="total" class="">0</span></p>
+                      <p class="font-bold text-2xl mt-5 pb-5 pl-3">Total <span>$</span><span id="total" class="">0</span></p>
 
                     </div>
+                    
+
+
+
                 </div>
             </div>
         </section>
